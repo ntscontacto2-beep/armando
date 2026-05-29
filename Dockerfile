@@ -35,11 +35,10 @@ RUN mkdir -p storage/framework/{sessions,views,cache,testing} storage/logs boots
 ENV APP_ENV=production
 ENV APP_DEBUG=false
 
-EXPOSE ${PORT:-80}
+EXPOSE 8000
 
-CMD sed -i "s/80/${PORT:-80}/g" /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf && \
-    php artisan config:cache && \
+CMD php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache && \
     php artisan migrate --force && \
-    apache2-foreground
+    php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
