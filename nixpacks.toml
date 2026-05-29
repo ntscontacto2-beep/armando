@@ -11,6 +11,7 @@ nixPkgs = [
   "php83Extensions.tokenizer",
   "php83Extensions.bcmath",
   "php83Extensions.ctype",
+  "php83Extensions.gd",
   "composer"
 ]
 
