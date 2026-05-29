@@ -1,0 +1,134 @@
+/* ====== Tema Tianguis SMT (ligero sobre Bootstrap) ====== */
+:root{
+    --tsmt-primary: #2e7d32;      /* verde */
+    --tsmt-primary-600:#1b5e20;
+    --tsmt-accent:  #ffb300;      /* ámbar */
+    --tsmt-dark:    #111827;      /* gris muy oscuro */
+    --tsmt-muted:   #6b7280;      /* gris texto secundario */
+    --tsmt-bg:      #f8fafc;      /* fondo */
+    --tsmt-card:    #ffffff;
+    --tsmt-radius:  1rem;
+    --tsmt-shadow:  0 10px 25px rgba(0,0,0,.08);
+}
+
+html,body{
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--tsmt-bg);
+    color: #111;
+}
+
+/* Navbar */
+.navbar{
+    transition: all .25s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+.navbar.shrink{
+    background: #0f172a !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,.18);
+}
+.navbar-brand{
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+/* Buscador en navbar */
+.navbar .form-control{
+    border-radius: 999px;
+}
+.navbar .btn{
+    border-radius: 999px;
+}
+
+/* Tipografía y utilidades */
+h1,h2,h3,h4,h5{
+    font-weight: 700;
+    color: var(--tsmt-dark);
+}
+.text-muted{ color: var(--tsmt-muted) !important; }
+
+.bg-body{ background: var(--tsmt-bg) !important; }
+
+/* Cards */
+.card{
+    border: 0;
+    border-radius: var(--tsmt-radius);
+    background: var(--tsmt-card);
+    box-shadow: var(--tsmt-shadow);
+}
+.card .card-title{ font-weight: 600; }
+
+/* Botones */
+.btn-primary{
+    --bs-btn-bg: var(--tsmt-primary);
+    --bs-btn-border-color: var(--tsmt-primary);
+    --bs-btn-hover-bg: var(--tsmt-primary-600);
+    --bs-btn-hover-border-color: var(--tsmt-primary-600);
+    --bs-btn-focus-shadow-rgb: 46,125,50;
+    border-radius: .75rem;
+}
+
+/* Badges/labels útiles */
+.badge-accent{
+    background: var(--tsmt-accent);
+    color:#222;
+}
+
+/* Footer */
+footer{
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+}
+footer small{
+    color: var(--tsmt-muted);
+}
+
+/* Links */
+a, .link-primary{
+    color: var(--tsmt-primary);
+    text-decoration: none;
+}
+a:hover{ color: var(--tsmt-primary-600); text-decoration: underline; }
+
+/* Secciones */
+.section-title{
+    margin-bottom: .75rem;
+}
+.section-subtitle{
+    color: var(--tsmt-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Helpers */
+.rounded-2xl{ border-radius: var(--tsmt-radius) !important; }
+.shadow-soft{ box-shadow: var(--tsmt-shadow) !important; }
+
+/* Contenido de detalle de local */
+.local-meta p{ margin-bottom: .35rem; }
+
+/* Alerts pulidas */
+.alert{
+    border: 0;
+    border-radius: .9rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+/* Tablas */
+.table{
+    background: var(--tsmt-card);
+    box-shadow: var(--tsmt-shadow);
+    border-radius: var(--tsmt-radius);
+    overflow: hidden;
+}
+.table thead th{
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+    border-bottom: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px){
+    .navbar .form-control{ width: 120px; }
+}
+
+/* ====== Fin del tema ====== */
