@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\laragon\\\\www\\\\tianguis-smx-mvc\\\\resources\\\\views\\\\vendedores\")",
+      "PowerShell(New-Item -ItemType File -Path \"c:\\\\laragon\\\\www\\\\tianguis-smx-mvc\\\\resources\\\\views\\\\vendedores\\\\index.blade.php\" -Force)"
+    ]
+  }
+}
